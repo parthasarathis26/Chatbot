@@ -1,0 +1,127 @@
+version: '3.1'
+intents:
+  - inquire_water_level
+  - inquire_water_quality
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - question_aquifer
+  - question_confinedaquifer
+  - question_unconfinedaquifer
+  - question_recharge
+  - question_discharge
+  - question_watertable
+  - question_permeability
+  - question_porosity
+  - question_well
+  - question_artesianwell
+  - question_groundwater
+  - question_hydraulicconductivity
+  - question_groundwaterflow
+  - question_drawdown
+  - question_overdraft
+  - question_noc
+  - question_purposeofnoc
+  - question_conditionsofnoc
+
+entities:
+  - location
+
+slots:
+  location:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: location
+
+responses:
+  utter_water_level:
+    - text: 'The water level at {location} is {water_level} meters.'
+
+  utter_water_quality:
+    - text: 'The water quality at {location} is {water_quality}.'
+
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_questionaquifer:
+    - text: "An aquifer is an underground layer of water-bearing rock, sand, or gravel that stores and transmits groundwater. Aquifers are critical sources of fresh water for wells and springs."
+
+  utter_questionconfinedaquifer:
+    - text: "A confined aquifer is an aquifer that is trapped between two impermeable layers of rock or clay. Water in confined aquifers is under pressure, and when tapped, it may rise above the top of the aquifer without pumping, sometimes forming artesian wells."
+
+  utter_questionunconfinedaquifer:
+    - text: "An unconfined aquifer is one that is not bound by an overlying impermeable layer, meaning it is directly recharged by surface water. Water in an unconfined aquifer is subject to atmospheric pressure."
+
+  utter_questionrecharge:
+    - text: "Recharge is the process by which water from precipitation, rivers, or lakes infiltrates the ground and replenishes an aquifer. Recharge areas are critical for maintaining the sustainability of groundwater resources."
+
+  utter_questiondischarge:
+    - text: "Discharge is the flow of groundwater to the surface, such as into rivers, lakes, or the ocean, or through springs and wells. It is the opposite of recharge and is part of the natural water cycle."
+
+  utter_questionwatertable:
+    - text: "The water table is the upper surface of the saturated zone in an unconfined aquifer, where the pressure of the water is equal to atmospheric pressure. The water table can rise or fall depending on factors like rainfall, recharge, and extraction."
+
+  utter_questionpermeability:
+    - text: "Permeability is the ability of a material (such as rock or soil) to transmit water. High permeability means that water can flow easily through the material, whereas low permeability indicates that water movement is slow."
+
+  utter_questionporosity:
+    - text: "Porosity is the percentage of the total volume of a rock or sediment that is made up of voids or spaces. These voids can store water, and porosity determines how much water an aquifer can hold."
+
+  utter_questionwell:
+    - text: "A well is a hole drilled into the ground to access water in an aquifer. Wells are used for domestic, agricultural, industrial, and municipal water supply."
+
+  utter_questionartesianwell:
+    - text: "An artesian well taps into a confined aquifer where the water is under pressure. This pressure can cause the water to rise naturally to the surface without the need for pumping."
+
+  utter_questiongroundwater:
+    - text: "Groundwater is the water that exists beneath the Earth's surface in soil pores and fractures of rock formations. It is a major source of fresh water for drinking, irrigation, and industrial use."
+
+  utter_questionhydraulicconductivity:
+    - text: "Hydraulic conductivity is a measure of how easily water can move through porous material like soil or rock. It is a critical factor in determining the flow rate of groundwater."
+
+  utter_questiongroundwaterflow:
+    - text: "Groundwater flow refers to the movement of groundwater through the porous spaces in rocks or soil, driven by gravity and pressure differences. It is usually slow compared to surface water flow."
+
+  utter_questiondrawdown:
+    - text: "Drawdown refers to the lowering of the water table or potentiometric surface caused by pumping water from a well. It is an important concept in determining the sustainability of groundwater extraction."
+
+  utter_questionoverdraft:
+    - text: "Overdraft occurs when the rate of groundwater extraction exceeds the natural recharge rate, leading to a decline in groundwater levels. Prolonged overdraft can result in aquifer depletion and other environmental issues."
+
+  utter_questionnoc:
+    - text: "No Objection Certificate (NOC): A legal document issued by an organization, government, or individual to declare that they have no objection to the details mentioned within the certificate. For example, in India, an NOC might be required when transferring vehicle ownership or applying for a visa."
+
+  utter_questionpurposeofnoc:
+    - text: "The NOC is usually required for activities like setting up borewells, tube wells, or any large-scale groundwater extraction for industrial, agricultural, or commercial purposes."
+
+  utter_questionconditionsofnoc:
+    - text: "Getting a No Objection Certificate (NOC) for groundwater extraction typically involves adhering to specific legal and administrative procedures laid out by the government or regulatory authority in your country or region. [Click here](https://cgwa-noc.gov.in/LandingPage/UserAssistance/INSTRUCTIONSFORAPPLYING.pdf) to view the detailed instructions."
+
+actions:
+  - action_inquire_water_level
+  - action_inquire_water_quality
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

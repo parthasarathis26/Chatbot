@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-city",
+      "2": "I-city",
+      "3": "L-city",
+      "4": "U-city",
+      "5": "B-district",
+      "6": "I-district",
+      "7": "L-district",
+      "8": "U-district",
+      "9": "B-tehsil",
+      "10": "I-tehsil",
+      "11": "L-tehsil",
+      "12": "U-tehsil",
+      "13": "B-village",
+      "14": "I-village",
+      "15": "L-village",
+      "16": "U-village",
+      "17": "B-well_type",
+      "18": "I-well_type",
+      "19": "L-well_type",
+      "20": "U-well_type",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-city": 1,
+      "I-city": 2,
+      "L-city": 3,
+      "U-city": 4,
+      "B-district": 5,
+      "I-district": 6,
+      "L-district": 7,
+      "U-district": 8,
+      "B-tehsil": 9,
+      "I-tehsil": 10,
+      "L-tehsil": 11,
+      "U-tehsil": 12,
+      "B-village": 13,
+      "I-village": 14,
+      "L-village": 15,
+      "U-village": 16,
+      "B-well_type": 17,
+      "I-well_type": 18,
+      "L-well_type": 19,
+      "U-well_type": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]
